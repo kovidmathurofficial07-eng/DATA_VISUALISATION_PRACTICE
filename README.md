@@ -1,2 +1,2 @@
 # DATA_VISUALISATION_PRACTICE
-This is a R script where I am practicing and honing my Data Visualisation skills.
+This repository contains reproducible R scripts for data visualization using the tidyverse and ggplot2.
