@@ -1,0 +1,76 @@
+library(tidyverse)
+library(palmerpenguins)
+library (ggthemes)
+palmerpenguins::penguins
+View (penguins)
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g) 
+  )+
+  geom_point(aes(color = species, shape = species))+
+  geom_smooth (method = "lm") +
+labs(
+  title = "Flipper length and Body mass",
+  subtitle = "dimensions for adelie, chinstrap and gentoo penguins",
+  x = "Flipper Length (mm)", y = "Body Mass (g)",
+  color = "species", shape = "species",
+) +
+  scale_color_colorblind()
+# started exercise 2.2.5
+library(tidyverse)
+library (palmerpenguins)
+library(ggthemes)
+palmerpenguins::penguins
+view(penguins)
+ggplot(
+  data = penguins,
+  mapping = aes(x = bill_length_mm, y = bill_depth_mm)
+)+
+  geom_point()
+#Q4
+ggplot(
+  data = penguins,
+  mapping = aes(x = bill_depth_mm, y = species)
+)+
+  geom_point()
+#Q5
+ggplot(data = penguins) +
+  geom_point()
+#Q6
+ggplot(
+  data = penguins,
+  mapping = aes(x = bill_depth_mm, y = bill_length_mm)
+)+
+  geom_point(na.rm = TRUE) +
+  labs (caption = "Data came from the palmerpenguins package")
+#Q8
+ggplot(
+data = penguins,
+mapping = aes (x=flipper_length_mm, y=body_mass_g)
+)+
+  geom_point(aes(color = bill_depth_mm))+
+  geom_smooth()
+#Q9
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g, colour = island)
+) +
+  geom_point()+
+  geom_smooth(se = FALSE)
+#Q10a
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+)+
+  geom_point()+
+  geom_smooth()
+#Q10b
+ggplot()+
+  geom_point(
+    data = penguins,
+    mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  )+
+  geom_smooth(
+    data = penguins,
+    mapping = aes(x = flipper_length_mm, y = body_mass_g)
+  )
