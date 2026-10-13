@@ -1,0 +1,34 @@
+#Visual_distru=ibution_ch1
+#categorical_value
+ggplot(penguins, aes(x = species))+
+  geom_bar()
+#Variable_to_factor_reordering
+ggplot(penguins, aes(x = fct_infreq(species)))+
+  geom_bar()
+#Numerical_Variable
+#histogram_binwidth
+ggplot(penguins, aes(x = body_mass_g))+
+  geom_histogram(binwidth = 200)
+ggplot(penguins, aes(x = body_mass_g))+
+  geom_histogram(binwidth = 20)
+ggplot(penguins, aes(x = body_mass_g))+
+  geom_histogram(binwidth = 2000)
+ggplot(penguins, aes(x = body_mass_g))+
+  geom_histogram(binwidth = 200)
+#density_plot
+ggplot(penguins, aes(x = body_mass_g))+
+  geom_density()
+#excercise_2.4.3
+ggplot(penguins, aes(y = species))+
+  geom_bar()
+ggplot(penguins, aes(x = species))+
+  geom_bar(color = "red")
+ggplot(penguins, aes(x = species))+
+  geom_bar(fill = "red")
+ggplot(penguins, aes(x = body_mass_g))+
+  geom_histogram(bins = 35)
+ggplot(diamonds, aes(x = carat))+
+  geom_histogram(binwidth = 0.10)+
+  labs(
+    title = "diamonds"
+  )
